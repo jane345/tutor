@@ -1,0 +1,59 @@
+Intel(R) Atom (TM) Android x86 Emulator Image Add-on
+
+Version 1.0 (Android 2.3.7 - API Level 10)
+
+
+----------------------------
+Release Notes
+----------------------------
+Intel is proud to announce the first release of the Android x86 Emulator Image Add-on for Atom powered devices.
+
+This add-on:
+-Provides a ready-to-go virtual Intel(R) Atom (TM) x86 platform, using Android 2.3.7 (Gingerbread)
+-Allows developers to design, create, and test Android applications for Intel's x86 platform
+-Integrates with the Android SDK, allowing the use of existing Android development tools
+
+
+----------------------------
+Minimum System Requirements
+----------------------------
+The Android x86 Emulator Image Add-on requires the Android SDK to be installed. Please refer to the Android developer website (http://developer.android.com/sdk/requirements.html) for information on Android SDK system requirements.
+
+The Intel(R) Atom (TM) Android x86 Emulator Image Add-on supports the following operating systems:
+-Ubuntu* 10.10 (32/64-bit)
+-Windows* 7 (32/64-bit)
+-Windows Vista (32/64-bit)
+-Windows XP (32-bit only)
+-Intel-based Macs with Mac OS X 10.6 and later (32/64-bit)
+
+
+----------------------------
+Known issues
+----------------------------
+Hardware Feature Emulation
+Please note that certain hardware features (such as camera, accelerometer, etc.) are unavailable on emulated devices.
+
+
+Modulo Floating Point Precision
+Due to software emulation, floating point modulo operations may differ in precision from actual x86 hardware. For modulo operations requiring high precision, it is advised to develop on Linux with KVM (Kernel Virtual Machine) enabled, or to verify floating point calculations on Intel hardware. 
+
+For example, the result of "3.40282346638528860e+38f % - 1E-9f" will differ slightly depending on whether or not KVM is used:
+
+Expected result of Emulator x86 without KVM	
+6.35826946648876000000e-10
+
+Expected result of Emulator x86 with KVM
+7.25848936511397000000e-10
+
+
+----------------------------
+Additional Documentation
+----------------------------
+For detailed installation instructions and the latest release notes updates visit:
+http://www.intel.com/software/android
+
+
+----------------------------
+Copyright (C) 2012 Intel Corporation.  All rights reserved.
+All products, computer systems, dates, and figures specified are preliminary based on current expectations, and are subject to change without notice.
+* Other names and brands may be claimed as the property of others.
